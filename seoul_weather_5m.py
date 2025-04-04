@@ -1,4 +1,9 @@
-# 5분마다 한 번씩 서울의 기온 정보를  csv형태로 저장
+# 5분마다 한 번씩 서울의 기온 정보를 csv형태로 저장!!
+import requests
+import csv
+from datetime import datetime
+import os
+
 MY_API_KEY =  os.getenv("OPENWEATHER_API_KEY")
 CITY = "Seoul"
 URL = f"https://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={MY_API_KEY}&units=metric"
